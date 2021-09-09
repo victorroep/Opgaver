@@ -1,31 +1,35 @@
 int timer = 0;
+color bg = (0);
+color red = color(255,0,0);
+color yellow = color(255,255,0);
+color green = color(0,255,0);
 
 void setup(){
     size(200,600);
-    background(0);
+    background(bg);
     frameRate(1);
     ellipseMode(CORNER);
     resetColors();
-    fill(255,0,0);
+    fill(red);
     ellipse(0,0,height/3,width);
 }
 
 void draw(){
     if(timer <= 2){
         resetColors();
-        fill(255,0,0);
+        fill(red);
         ellipse(0,0,height/3,width);
     }else if(timer <= 4){
         resetColors();
-        fill(255,255,0);
+        fill(yellow);
         ellipse(0,height/3,height/3,width);
     }else if(timer <= 6){
         resetColors();
-        fill(0,255,0);
+        fill(green);
         ellipse(0,height/3*2,height/3,width);
     }else if(timer <= 8){
         resetColors();
-        fill(255,255,0);
+        fill(yellow);
         ellipse(0,height/3,height/3,width);
     }else{
         timer = 0;
